@@ -15,7 +15,7 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export function Footer() {
-    const [year, setYear] = useState(new Date().getFullYear());
+    const [year, setYear] = useState<number | null>(null);
 
     useEffect(() => {
         setYear(new Date().getFullYear());
@@ -40,7 +40,7 @@ export function Footer() {
                 </div>
                 <div className="mt-12 text-sm text-primary-foreground/70">
                     <p>PEHCa Productora de Eventos</p>
-                    <p>&copy; {year} Todos los derechos reservados.</p>
+                    {year !== null ? <p>&copy; {year} Todos los derechos reservados.</p> : null}
                 </div>
             </div>
         </footer>
