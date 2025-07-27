@@ -107,42 +107,44 @@ export default function Home() {
                 Nuestra experiencia abarca una amplia gama de celebraciones y reuniones.
               </p>
             </div>
-            <Carousel
-              opts={{ align: "start", loop: true, }}
-              className="w-full max-w-6xl mx-auto pt-12"
-            >
-              <CarouselContent>
-                {[
-                  { alt: 'Lanzamiento de producto', hint: 'product launch' },
-                  { alt: 'Fiesta de fin de año', hint: 'company party' },
-                  { alt: 'Team building', hint: 'team building' },
-                  { alt: 'Feria comercial', hint: 'trade show' },
-                  { alt: 'Concierto privado', hint: 'private concert' },
-                ].map((event, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-2">
-                      <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <CardContent className="flex aspect-video items-center justify-center p-0">
-                          <Image
-                            src="https://placehold.co/600x400.png"
-                            width={600}
-                            height={400}
-                            alt={event.alt}
-                            className="w-full h-full object-cover"
-                            data-ai-hint={event.hint}
-                          />
-                        </CardContent>
-                        <div className="p-4 bg-card">
-                          <p className="text-center font-headline text-lg font-semibold text-primary">{event.alt}</p>
-                        </div>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+            <div className="relative max-w-6xl mx-auto pt-12">
+              <Carousel
+                opts={{ align: "start", loop: true, }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {[
+                    { alt: 'Lanzamiento de producto', hint: 'product launch' },
+                    { alt: 'Fiesta de fin de año', hint: 'company party' },
+                    { alt: 'Team building', hint: 'team building' },
+                    { alt: 'Feria comercial', hint: 'trade show' },
+                    { alt: 'Concierto privado', hint: 'private concert' },
+                  ].map((event, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-2">
+                        <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                          <CardContent className="flex aspect-video items-center justify-center p-0">
+                            <Image
+                              src="https://placehold.co/600x400.png"
+                              width={600}
+                              height={400}
+                              alt={event.alt}
+                              className="w-full h-full object-cover"
+                              data-ai-hint={event.hint}
+                            />
+                          </CardContent>
+                          <div className="p-4 bg-card">
+                            <p className="text-center font-headline text-lg font-semibold text-primary">{event.alt}</p>
+                          </div>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10" />
+                <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10" />
+              </Carousel>
+            </div>
           </div>
         </section>
       </main>
