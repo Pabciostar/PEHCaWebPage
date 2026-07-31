@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: 'PEHCa Events',
   description: 'Productora de eventos independientes como activaciones de marcas, cenas corporativas, comunicación interna o eventos empresariales.',
+  verification: {
+    google: 'lRC1xNGGtdD1RfoOIVjokhbfkf8nuUPtr4cXBSOaLDw',
+  },
 };
 
 export default function RootLayout({
