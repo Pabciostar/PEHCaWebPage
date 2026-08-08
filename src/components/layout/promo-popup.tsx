@@ -18,7 +18,7 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
  */
 const POPUP_CONFIG = {
   enabled: true,
-  imageSrc: '/images/popup/popup-2026-08-07.jpeg',
+  imageSrc: '/images/popup/popup-2026-08-07.webp',
   imageAlt: 'Promoción PEHCa!',
   ctaText: 'Comunícate con nosotros',
   ctaHref: 'https://wa.me/56982397461',
