@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { PromoPopup } from "@/components/layout/promo-popup";
 
 export const metadata: Metadata = {
   title: 'PEHCa Events',
@@ -24,6 +25,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         {children}
+        <PromoPopup />
         <Toaster />
       </body>
     </html>
